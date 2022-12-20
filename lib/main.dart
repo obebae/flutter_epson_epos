@@ -64,6 +64,16 @@ class EpsonEPOS {
     };
     return await _channel.invokeMethod('onPrint', params);
   }
+  
+   static Future<dynamic> onConnect(EpsonPrinterModel printer) async {
+    final Map<String, dynamic> params = {
+      "type": printer.type,
+      "series": printer.series,
+      "target": printer.target
+    };
+    return await _channel.invokeMethod('onConnect', params);
+  }
+
 
   static Future<dynamic> getPrinterSetting(EpsonPrinterModel printer) async {
     final Map<String, dynamic> params = {

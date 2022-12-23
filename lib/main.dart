@@ -35,7 +35,11 @@ class EpsonEPOS {
         if (prs.length > 0) {
           return prs.map((e) {
             final modelName = e['model'];
-            final modelSeries = _eposHelper.getSeries(modelName);
+            String series = modelName;
+            try {
+              final modelSeries = _eposHelper.getSeries(modelName);
+              series = (modelSeries != null) ? modelSeries.id : modelName;
+            } catch (e) {}
             return EpsonPrinterModel(
               ipAddress: e['ipAddress'],
               bdAddress: e['bdAddress'],

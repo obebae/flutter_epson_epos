@@ -46,7 +46,7 @@ class EpsonEPOS {
               macAddress: e['macAddress'],
               type: printType,
               model: modelName,
-              series: modelSeries?.id,
+              series: series,
               target: e['target'],
             );
           }).toList();

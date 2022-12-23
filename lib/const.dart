@@ -32,7 +32,7 @@ final List<EPSONSeries> epsonSeries = [
     "TM-T70II-DT",
     "TM-T70II-DT2"
   ]),
-  EPSONSeries(id: "TM_T81", models: ["TM-T81II", "TM-T81III"]),
+  EPSONSeries(id: "TM_T81", models: ["TM-T81", "TM-T81II", "TM-T81III"]),
   EPSONSeries(id: "TM_T82", models: [
     "TM-T82",
     "TM-T82II",
